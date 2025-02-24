@@ -96,9 +96,6 @@ export class Me {
   location: string;
 
   @Field(() => String)
-  locationLink: string;
-
-  @Field(() => String)
   about: string;
 
   @Field(() => String)
@@ -107,6 +104,7 @@ export class Me {
   @Field(() => String)
   avatarUrl: string;
 
+  
   @Field(() => String)
   personalWebsiteUrl: string;
 
