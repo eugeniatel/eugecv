@@ -1,5 +1,5 @@
 import { LinkedInIcon } from "@/components/icons";
-import { TwitterIcon } from "lucide-react";
+import { XIcon } from "@/components/icons";
 
 export const RESUME_DATA = {
   name: "Eugenia Tellechea",
@@ -13,18 +13,20 @@ export const RESUME_DATA = {
     </>
   ),
   avatarUrl: "/images/pfplinkedin.jpeg",
+  personalWebsiteUrl: "https://eugeniatel.github.io",
   contact: {
     email: "eugeniatellechea@proton.me",
+    tel: "",
     social: [
       {
         name: "LinkedIn",
-        url: "https://www.linkedin.com/in/eugenia-tellechea",
+        url: "https://www.linkedin.com/in/eugenia-tellechea/",
         icon: LinkedInIcon,
       },
       {
-        name: "Twitter",
+        name: "X",
         url: "https://x.com/eugenia_0x",
-        icon: TwitterIcon,
+        icon: XIcon,
       },
     ],
   },

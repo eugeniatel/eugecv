@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { RESUME_DATA } from "@/data/resume-data";
 
+
 interface SocialButtonProps {
   href: string;
   icon: React.ElementType;
@@ -50,6 +51,13 @@ function ContactButtons({ contact, personalWebsiteUrl }: ContactButtonsProps) {
           label="Email"
         />
       )}
+      {contact.tel && (
+        <SocialButton
+          href={`tel:${contact.tel}`}
+          icon={PhoneIcon}
+          label="Phone"
+        />
+      )}
       {contact.social.map((social) => (
         <SocialButton
           key={social.name}
@@ -95,6 +103,14 @@ function PrintContact({ contact, personalWebsiteUrl }: PrintContactProps) {
           <span aria-hidden="true">/</span>
         </>
       )}
+      {contact.tel && (
+        <a
+          className="underline hover:text-foreground/70"
+          href={`tel:${contact.tel}`}
+        >
+          {contact.tel}
+        </a>
+      )}
     </div>
   );
 }
@@ -115,6 +131,16 @@ export function Header() {
         >
           {RESUME_DATA.about}
         </p>
+
+        <ContactButtons
+          contact={RESUME_DATA.contact}
+          personalWebsiteUrl={RESUME_DATA.personalWebsiteUrl}
+        />
+
+        <PrintContact
+          contact={RESUME_DATA.contact}
+          personalWebsiteUrl={RESUME_DATA.personalWebsiteUrl}
+        />
       </div>
 
       <Avatar className="size-28" aria-hidden="true">
