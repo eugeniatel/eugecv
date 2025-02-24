@@ -16,23 +16,12 @@ interface BadgeListProps {
  * Renders a list of badges for work experience
  * Handles both mobile and desktop layouts through className prop
  */
-function BadgeList({ className, badges }: BadgeListProps) {
+function BadgeList({ className, badges = [] }: BadgeListProps) {
   if (badges.length === 0) return null;
-
   return (
-    <ul
-      className={cn("inline-flex list-none gap-x-1 p-0", className)}
-      aria-label="Technologies used"
-    >
-      {badges.map((badge) => (
-        <li key={badge}>
-          <Badge
-            variant="secondary"
-            className="align-middle text-xs print:px-1 print:py-0.5 print:text-[8px] print:leading-tight"
-          >
-            {badge}
-          </Badge>
-        </li>
+    <ul className={className}>
+      {badges.map((badge, index) => (
+        <li key={index}>{badge}</li>
       ))}
     </ul>
   );

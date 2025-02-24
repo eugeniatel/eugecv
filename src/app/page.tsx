@@ -2,7 +2,6 @@ import { CommandMenu } from "@/components/command-menu";
 import { Metadata } from "next";
 import { RESUME_DATA } from "@/data/resume-data";
 import { WorkExperience } from "./components/WorkExperience";
-import { Projects } from "./components/Projects";
 import { Education } from "./components/Education";
 import { Summary } from "./components/Summary";
 import { Skills } from "./components/Skills";
@@ -39,13 +38,6 @@ export const metadata: Metadata = {
 function getCommandMenuLinks() {
   const links = [];
 
-  if (RESUME_DATA.personalWebsiteUrl) {
-    links.push({
-      url: RESUME_DATA.personalWebsiteUrl,
-      title: "Personal Website",
-    });
-  }
-
   return [
     ...links,
     ...RESUME_DATA.contact.social.map((socialMediaLink) => ({
@@ -80,7 +72,6 @@ export default function ResumePage() {
 
           <Skills skills={RESUME_DATA.skills} />
 
-          <Projects projects={RESUME_DATA.projects} />
         </div>
       </section>
 
