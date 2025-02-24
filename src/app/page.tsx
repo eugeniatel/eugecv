@@ -35,8 +35,13 @@ export const metadata: Metadata = {
 /**
  * Transform social links for command menu
  */
-function getCommandMenuLinks() {
-  const links = [];
+interface CommandMenuLink {
+  url: string;
+  title: string;
+}
+
+function getCommandMenuLinks(): CommandMenuLink[] {
+  const links: CommandMenuLink[] = [];
 
   return [
     ...links,
