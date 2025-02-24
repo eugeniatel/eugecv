@@ -157,3 +157,4 @@ export const RESUME_DATA = {
     "Newsletter Management",
   ],
 } as const;
+
