@@ -9,12 +9,12 @@ type WorkBadges = readonly string[];
 
 interface BadgeListProps {
   className?: string;
-  badges: WorkBadges;
+  badges?: WorkBadges; // Make badges optional
 }
 
 /**
- * Renders a list of badges for work experience
- * Handles both mobile and desktop layouts through className prop
+ * Renders a list of badges for work experience.
+ * Handles both mobile and desktop layouts through className prop.
  */
 function BadgeList({ className, badges = [] }: BadgeListProps) {
   if (badges.length === 0) return null;
@@ -33,7 +33,7 @@ interface WorkPeriodProps {
 }
 
 /**
- * Displays the work period in a consistent format
+ * Displays the work period in a consistent format.
  */
 function WorkPeriod({ start, end }: WorkPeriodProps) {
   return (
@@ -48,13 +48,14 @@ function WorkPeriod({ start, end }: WorkPeriodProps) {
 
 interface CompanyLinkProps {
   company: WorkExperience["company"];
-  link: WorkExperience["link"];
+  link?: WorkExperience["link"]; // Make link optional
 }
 
 /**
- * Renders company name with optional link
+ * Renders company name with an optional link.
  */
 function CompanyLink({ company, link }: CompanyLinkProps) {
+  if (!link) return <span>{company}</span>;
   return (
     <a
       className="hover:underline"
@@ -73,11 +74,12 @@ interface WorkExperienceItemProps {
 }
 
 /**
- * Individual work experience card component
- * Handles responsive layout for badges (mobile/desktop)
+ * Individual work experience card component.
+ * Handles responsive layout for badges (mobile/desktop).
  */
 function WorkExperienceItem({ work }: WorkExperienceItemProps) {
-  const { company, link, badges, title, start, end, description } = work;
+  // Set default for badges to empty array if undefined.
+  const { company, link, badges = [], title, start, end, description } = work;
 
   return (
     <Card className="py-1 print:py-0">
@@ -118,8 +120,8 @@ interface WorkExperienceProps {
 }
 
 /**
- * Main work experience section component
- * Renders a list of work experiences in chronological order
+ * Main work experience section component.
+ * Renders a list of work experiences in chronological order.
  */
 export function WorkExperience({ work }: WorkExperienceProps) {
   return (

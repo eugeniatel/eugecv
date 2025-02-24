@@ -45,6 +45,7 @@ export const RESUME_DATA = {
   work: [
     {
       company: "Web3 Citizen",
+      link: "https://web3citizen.xyz",
       title: "Core Contributor",
       start: "Sep 2023",
       end: "Present",
@@ -81,30 +82,26 @@ export const RESUME_DATA = {
           </li>
         </ul>
       ),
+      badges: [],
     },
     {
       company: "Aleph",
+      link: "https://aleph.crecimiento.build/hackathon",
       title: "Hackathon Team",
       start: "Dec 2024",
       end: "Dec 2024",
       description: (
         <ul className="list-disc list-inside">
           <li>
-            Organized Buenos Aires’{" "}
-              <a
-                href="https://aleph.crecimiento.build/hackathon"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="underline text-blue-600 hover:text-blue-800 visited:text-purple-600"
-              >
-                Pop Up City Hackathon
-              </a>, handling communication and collaborating with operations.
+            Organized Buenos Aires’ Pop Up City Hackathon, handling communication and collaborating with operations.
           </li>
         </ul>
       ),
+      badges: [],
     },
     {
       company: "Seeds",
+      link: "https://www.weareseeders.com/",
       title: "Marketing Analyst",
       start: "Aug 2022",
       end: "Dec 2022",
@@ -118,9 +115,11 @@ export const RESUME_DATA = {
           </li>
         </ul>
       ),
+      badges: [],
     },
     {
       company: "Ministry of Culture of the City of Buenos Aires",
+      link: "https://buenosaires.gob.ar/ministerio-de-cultura",
       title: "Social Media Manager & Community Manager",
       start: "Apr 2021",
       end: "Aug 2022",
@@ -137,9 +136,11 @@ export const RESUME_DATA = {
           </li>
         </ul>
       ),
+      badges: [],
     },
     {
       company: "Other Activities",
+      link: "",
       title: "",
       start: "",
       end: "",
@@ -149,6 +150,7 @@ export const RESUME_DATA = {
           <li>Participated in the Translatathon 2024.</li>
         </ul>
       ),
+      badges: [],
     },
   ],
   skills: [

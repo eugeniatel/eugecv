@@ -9,3 +9,4 @@ export const LinkedInIcon = (props: React.SVGProps<SVGSVGElement>) => {
     </svg>
   );
 };
+
