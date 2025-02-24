@@ -3,28 +3,6 @@ import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { RESUME_DATA } from "@/data/resume-data";
 
-interface LocationLinkProps {
-  location: typeof RESUME_DATA.location;
-  locationLink: typeof RESUME_DATA.locationLink;
-}
-
-function LocationLink({ location, locationLink }: LocationLinkProps) {
-  return (
-    <p className="max-w-md items-center text-pretty font-mono text-xs text-foreground">
-      <a
-        className="inline-flex gap-x-1.5 align-baseline leading-none hover:underline"
-        href={locationLink}
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label={`Location: ${location}`}
-      >
-        <GlobeIcon className="size-3" aria-hidden="true" />
-        {location}
-      </a>
-    </p>
-  );
-}
-
 interface SocialButtonProps {
   href: string;
   icon: React.ElementType;
@@ -72,13 +50,6 @@ function ContactButtons({ contact, personalWebsiteUrl }: ContactButtonsProps) {
           label="Email"
         />
       )}
-      {contact.tel && (
-        <SocialButton
-          href={`tel:${contact.tel}`}
-          icon={PhoneIcon}
-          label="Phone"
-        />
-      )}
       {contact.social.map((social) => (
         <SocialButton
           key={social.name}
@@ -124,14 +95,6 @@ function PrintContact({ contact, personalWebsiteUrl }: PrintContactProps) {
           <span aria-hidden="true">/</span>
         </>
       )}
-      {contact.tel && (
-        <a
-          className="underline hover:text-foreground/70"
-          href={`tel:${contact.tel}`}
-        >
-          {contact.tel}
-        </a>
-      )}
     </div>
   );
 }
@@ -152,21 +115,6 @@ export function Header() {
         >
           {RESUME_DATA.about}
         </p>
-
-        <LocationLink
-          location={RESUME_DATA.location}
-          locationLink={RESUME_DATA.locationLink}
-        />
-
-        <ContactButtons
-          contact={RESUME_DATA.contact}
-          personalWebsiteUrl={RESUME_DATA.personalWebsiteUrl}
-        />
-
-        <PrintContact
-          contact={RESUME_DATA.contact}
-          personalWebsiteUrl={RESUME_DATA.personalWebsiteUrl}
-        />
       </div>
 
       <Avatar className="size-28" aria-hidden="true">
