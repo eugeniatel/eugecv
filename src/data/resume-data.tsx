@@ -1,241 +1,122 @@
-import {
-  ClevertechLogo,
-  ConsultlyLogo,
-  JojoMobileLogo,
-  MonitoLogo,
-  NSNLogo,
-  ParabolLogo,
-} from "@/images/logos";
-import { GitHubIcon, LinkedInIcon, XIcon } from "@/components/icons";
+import { LinkedInIcon } from "@/components/icons";
 
 export const RESUME_DATA = {
-  name: "Bartosz Jarocki",
-  initials: "BJ",
-  location: "Wrocław, Poland, CET",
-  locationLink: "https://www.google.com/maps/place/Wrocław",
+  name: "Eugenia Tellechea",
+  initials: "ET",
+  location: "Buenos Aires, Argentina",
   about:
-    "Detail-oriented Full Stack Engineer dedicated to building high-quality products.",
+    "Specialized in communication and research. Passionate about culture, decentralization and Ethereum.",
   summary: (
     <>
-      Frontend-focused Full Stack Engineer specializing in high-performance
-      React applications, scalable Node.js services, and real-time collaboration
-      systems. Experienced in technical architecture design and remote team
-      leadership.
+      Researcher with hands‐on experience in managing digital presence and content writing.
     </>
   ),
   avatarUrl: "https://avatars.githubusercontent.com/u/1017620?v=4",
-  personalWebsiteUrl: "https://jarocki.me",
+  personalWebsiteUrl: "https://www.web3citizen.xyz/research/eigenlayer",
   contact: {
-    email: "bartosz.jarocki@hey.com",
-    tel: "+48530213401",
+    email: "eugeniatellechea@proton.me",
     social: [
       {
-        name: "GitHub",
-        url: "https://github.com/BartoszJarocki",
-        icon: GitHubIcon,
-      },
-      {
         name: "LinkedIn",
-        url: "https://www.linkedin.com/in/bjarocki/",
+        url: "https://www.linkedin.com/in/eugenia-tellechea",
         icon: LinkedInIcon,
       },
       {
-        name: "X",
-        url: "https://x.com/BartoszJarocki",
-        icon: XIcon,
+        name: "Web3 Citizen",
+        url: "https://www.web3citizen.xyz/research/eigenlayer",
+        icon: LinkedInIcon,
+      },
+      {
+        name: "Paragraph",
+        url: "https://paragraph.xyz/@web3citizenxyz",
+        icon: LinkedInIcon,
+      },
+      {
+        name: "Aleph Hackathon",
+        url: "https://aleph.crecimiento.build/hackathon",
+        icon: LinkedInIcon,
       },
     ],
   },
   education: [
     {
-      school: "Wrocław University of Technology",
-      degree: "Bachelor's Degree in Control systems engineering and Robotics",
-      start: "2007",
-      end: "2010",
+      school: "University of Torcuato Di Tella",
+      degree: "MSc. Management and Analytics",
+      start: "Mar 2023",
+      end: "Present",
+    },
+    {
+      school: "University of Torcuato Di Tella",
+      degree: "BSc. Social Science (Minor in Communication and Journalism)",
+      start: "2016",
+      end: "2020",
     },
   ],
-  work: [
-    {
-      company: "Film.io",
-      link: "https://film.io",
-      badges: ["Remote", "React", "Next.js", "TypeScript", "Node.js"],
-      title: "Software Architect",
-      logo: ConsultlyLogo,
-      start: "2024",
-      end: null,
-      description: (
-        <>
-          Leading technical architecture of a blockchain-based film funding
-          platform.
-          <ul className="list-inside list-disc">
-            <li>
-              Architecting migration from CRA to Next.js for improved
-              performance, SEO, and DX
-            </li>
-            <li>
-              Established release process enabling faster deployments and
-              reliable rollbacks
-            </li>
-            <li>
-              Implementing system-wide monitoring and security improvements
-            </li>
-          </ul>
-        </>
-      ),
-    },
-    {
-      company: "Parabol",
-      link: "https://parabol.co",
-      badges: [
-        "Remote",
-        "React",
-        "TypeScript",
-        "Node.js",
-        "GraphQL",
-        "Tailwind CSS",
+ work: [
+        {
+          company: "Seeds",
+          title: "Marketing Analyst",
+          start: "Aug 2022",
+          end: "Dec 2022",
+          description: (
+            <>
+              Managed digital presence to increase brand awareness for an HR startup. Assisted in event organization and conducted research mapping brand opportunities. Oversaw social media channels, achieving a 50% growth in organic reach, and collaborated with designers, video creators, and photographers for comprehensive event coverage.
+            </>
+          ),
+        },
+        {
+          company: "Ministry of Culture of the City of Buenos Aires",
+          title: "Social Media Manager & Community Manager",
+          start: "Apr 2021",
+          end: "Aug 2022",
+          description: (
+            <>
+              Led creation and publishing of reports on crypto narratives across Ethereum—including DAOs, Grants, Restaking, and EigenLayer. Conducted in-depth research to ensure content accuracy, created and led two ecosystem-focused newsletters (EigenLayer News and OP Bulletin), and contributed to a governance platform for ArbitrumDAO and Scroll DAO.
+            </>
+          ),
+        },
+        {
+          company: "Web3 Citizen",
+          title: "Core Contributor",
+          start: "Sep 2023",
+          end: "Present",
+          description: (
+            <>
+              Organized Buenos Aires’ Pop Up City Hackathon, handling communication and collaborating with operations to ensure a successful event.
+            </>
+          ),
+        },
+        {
+          company: "Aleph",
+          title: "Hackathon Team",
+          start: "Dec 2024",
+          end: "",
+          description: (
+            <>
+              Participated as part of a hackathon team, contributing to innovative solutions and collaborative problem-solving.
+            </>
+          ),
+        },
+        {
+          company: "Other Activities",
+          title: "Additional Engagements",
+          start: "",
+          end: "",
+          description: (
+            <>
+              Devcon Scholar 2024 for Devcon SEA. Participated in the Translatathon 2024.
+            </>
+          ),
+        },
       ],
-      title: "Senior Full Stack Developer",
-      logo: ParabolLogo,
-      start: "2021",
-      end: "2024",
-      description: (
-        <>
-          Senior developer and squad leader for an enterprise agile meeting
-          platform.
-          <ul className="list-inside list-disc">
-            <li>
-              Built design system with Tailwind CSS, improving development speed
-              and time to market
-            </li>
-            <li>
-              Implemented engineering practices: PR automation, code review
-              guidelines, and workflows
-            </li>
-            <li>
-              Open source contributions to Relay DevTools and React i18n tooling
-            </li>
-          </ul>
-        </>
-      ),
-    },
-    {
-      company: "Clevertech",
-      link: "https://clevertech.biz",
-      badges: ["Remote", "React", "TypeScript", "Node.js", "Android", "Kotlin"],
-      title: "Lead Android Developer → Full Stack Developer",
-      logo: ClevertechLogo,
-      start: "2015",
-      end: "2021",
-      description: (
-        <>
-          Successfully transitioned from mobile to full-stack development while
-          leading distributed teams.
-          <ul className="list-inside list-disc">
-            <li>
-              Led frontend team at Evercast, building real-time platform
-              supporting 30+ users per room with HD streaming and collaboration
-              tools
-            </li>
-            <li>
-              Developed offline-first Android app for DKMS, improving donor
-              registration process
-            </li>
-            <li>
-              Led development teams across multiple successful client projects
-            </li>
-          </ul>
-        </>
-      ),
-    },
-    {
-      company: "Jojo Mobile",
-      link: "https://bsgroup.eu/",
-      badges: ["On Site", "Android", "Java", "Kotlin"],
-      title: "Android Developer → Lead Android Developer",
-      logo: JojoMobileLogo,
-      start: "2012",
-      end: "2015",
-      description: (
-        <>
-          First Android developer, grew and led a team of 15+ engineers while
-          establishing engineering culture.
-          <ul className="list-inside list-disc">
-            <li>
-              Developed apps for major Polish companies including LOT, Polskie
-              Radio, and Agora
-            </li>
-            <li>Built and mentored high-performing mobile development team</li>
-          </ul>
-        </>
-      ),
-    },
-    {
-      company: "Nokia Siemens Networks",
-      link: "https://www.nokia.com",
-      badges: ["On Site", "C/C++", "LTE", "Agile"],
-      title: "C/C++ Developer",
-      logo: NSNLogo,
-      start: "2010",
-      end: "2012",
-      description:
-        "Developed software for LTE base stations at enterprise scale, gaining strong fundamentals in software architecture, testing practices, and cross-team collaboration.",
-    },
-  ],
-  skills: [
-    "React/Next.js/Remix",
-    "TypeScript",
-    "Tailwind CSS",
-    "Design Systems",
-    "WebRTC",
-    "WebSockets",
-    "Node.js",
-    "GraphQL",
-    "Relay",
-    "System Architecture",
-    "Remote Team Leadership",
-  ],
-  projects: [
-    {
-      title: "Monito",
-      techStack: ["TypeScript", "Next.js", "Browser Extension", "PostgreSQL"],
-      description:
-        "Browser extension for debugging web applications. Includes taking screenshots, screen recording, E2E tests generation and generating bug reports",
-      logo: MonitoLogo,
-      link: {
-        label: "monito.dev",
-        href: "https://monito.dev/",
-      },
-    },
-    {
-      title: "Consultly",
-      techStack: [
-        "TypeScript",
-        "Next.js",
-        "Vite",
-        "GraphQL",
-        "WebRTC",
-        "Tailwind CSS",
-        "PostgreSQL",
-        "Redis",
+      skills: [
+        "Digital Marketing",
+        "Social Media Management",
+        "Content Creation",
+        "Community Engagement",
+        "Event Organization",
+        "Research & Analysis",
+        "Newsletter Management",
       ],
-      description:
-        "Platform for online consultations with real-time video meetings and scheduling",
-      logo: ConsultlyLogo,
-      link: {
-        label: "consultly.com",
-        href: "https://consultly.com/",
-      },
-    },
-    {
-      title: "Minimalist CV",
-      techStack: ["TypeScript", "Next.js", "Tailwind CSS"],
-      description:
-        "An open source minimalist, print friendly CV template with a focus on readability and clean design. >9k stars on GitHub",
-      logo: MonitoLogo,
-      link: {
-        label: "Minimalist CV",
-        href: "https://github.com/BartoszJarocki/cv",
-      },
-    },
-  ],
-} as const;
+      projects: [],
+    } as const;
