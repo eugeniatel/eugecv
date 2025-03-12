@@ -39,7 +39,7 @@ function EducationItem({ education }: EducationItemProps) {
         <div className="flex items-center justify-between gap-x-2 text-base">
           <h3
             className="font-semibold leading-none"
-            id={`education-${school.toLowerCase().replace(/\s+/g, "-")}`}
+            id={`education-${school.toLowerCase().replace(/\s+/g, "-")}-${degree.toLowerCase().replace(/\s+/g, "-")}`}
           >
             {school}
           </h3>
@@ -48,9 +48,7 @@ function EducationItem({ education }: EducationItemProps) {
       </CardHeader>
       <CardContent
         className="mt-2 text-foreground/80 print:text-[12px]"
-        aria-labelledby={`education-${school
-          .toLowerCase()
-          .replace(/\s+/g, "-")}`}
+        aria-labelledby={`education-${school.toLowerCase().replace(/\s+/g, "-")}-${degree.toLowerCase().replace(/\s+/g, "-")}`}
       >
         {degree}
       </CardContent>
@@ -78,7 +76,7 @@ export function Education({ education }: EducationListProps) {
         aria-labelledby="education-section"
       >
         {education.map((item) => (
-          <article key={item.school} role="article">
+          <article key={`${item.school}-${item.degree}`} role="article">
             <EducationItem education={item} />
           </article>
         ))}
