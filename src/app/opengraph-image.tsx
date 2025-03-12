@@ -36,53 +36,19 @@ export default async function Image() {
           }}
         >
           <img
-            src={RESUME_DATA.avatarUrl}
-            alt={RESUME_DATA.name}
+            src="https://eugeniacv.vercel.app/images/preview.png" // ✅ Updated Image URL
+            alt="Eugenia Tellechea Resume Preview"
             style={{
-              width: "150px",
-              height: "150px",
-              borderRadius: "10%",
-              marginBottom: "2rem",
+              width: "100%",
+              height: "100%",
+              objectFit: "cover",
             }}
           />
-          <div
-            style={{
-              fontSize: "3rem",
-              fontWeight: "bold",
-              color: "#333",
-              marginBottom: "1rem",
-            }}
-          >
-            {RESUME_DATA.name}
-          </div>
-          <div
-            style={{
-              fontSize: "1.5rem",
-              color: "#666",
-              maxWidth: "600px",
-              lineHeight: "1.4",
-            }}
-          >
-            {RESUME_DATA.about}
-          </div>
-          <div
-            style={{
-              display: "flex",
-              marginTop: "2rem",
-              gap: "1rem",
-            }}
-          >
-            {RESUME_DATA.contact.email && (
-              <div style={{ fontSize: "1rem", color: "#666" }}>
-                {RESUME_DATA.personalWebsiteUrl}
-              </div>
-            )}
-          </div>
         </div>
       </div>
     ),
     {
       ...size,
-    },
+    }
   );
 }
