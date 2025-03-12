@@ -1,51 +1,38 @@
 import { CommandMenu } from "@/components/command-menu";
-import { Metadata } from "next";
 import { RESUME_DATA } from "@/data/resume-data";
 import { WorkExperience } from "./components/WorkExperience";
 import { Education } from "./components/Education";
 import { Summary } from "./components/Summary";
 import { Skills } from "./components/Skills";
 import { Header } from "./components/Header";
+import type { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: `${RESUME_DATA.name} - Resume`,
-  description: RESUME_DATA.about,
-  openGraph: {
+export async function generateMetadata(): Promise<Metadata> {
+  return {
     title: `${RESUME_DATA.name} - Resume`,
     description: RESUME_DATA.about,
-    type: "profile",
-    locale: "en_US",
-    images: [
-      {
-        url: "https://eugeniacv.vercel.app/images/preview.png", // ✅ Updated Image URL
-        width: 1200,
-        height: 630,
-        alt: `${RESUME_DATA.name}'s profile picture`,
-      },
-    ],
-    url: "https://eugeniacv.vercel.app",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: `${RESUME_DATA.name} - Resume`,
-    description: RESUME_DATA.about,
-    images: ["https://eugeniacv.vercel.app/images/preview.png"], // ✅ Updated Image URL
-  },
-};
-
-/**
- * Transform social links for command menu
- */
-interface CommandMenuLink {
-  url: string;
-  title: string;
-}
-
-function getCommandMenuLinks(): CommandMenuLink[] {
-  return RESUME_DATA.contact.social.map((socialMediaLink) => ({
-    url: socialMediaLink.url,
-    title: socialMediaLink.name,
-  }));
+    openGraph: {
+      title: `${RESUME_DATA.name} - Resume`,
+      description: RESUME_DATA.about,
+      url: "https://eugeniacv.vercel.app",
+      siteName: "Eugenia Tellechea Resume",
+      type: "website",
+      images: [
+        {
+          url: "/images/preview.png", // ✅ Make sure this image is inside `public/images/`
+          width: 1200,
+          height: 630,
+          alt: `${RESUME_DATA.name}'s profile picture`,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${RESUME_DATA.name} - Resume`,
+      description: RESUME_DATA.about,
+      images: ["/images/preview.png"],
+    },
+  };
 }
 
 export default function ResumePage() {
@@ -59,22 +46,4 @@ export default function ResumePage() {
       </div>
 
       <section
-        className="mx-auto w-full max-w-2xl space-y-8 bg-white print:space-y-4"
-        aria-label="Resume Content"
-      >
-        <Header />
-
-        <div className="space-y-8 print:space-y-4">
-          <Summary summary={RESUME_DATA.summary} />
-          <WorkExperience work={RESUME_DATA.work} />
-          <Education education={RESUME_DATA.education} />
-          <Skills skills={RESUME_DATA.skills} />
-        </div>
-      </section>
-
-      <nav className="print:hidden" aria-label="Quick navigation">
-        <CommandMenu links={getCommandMenuLinks()} />
-      </nav>
-    </main>
-  );
-}
+        className="mx-auto
