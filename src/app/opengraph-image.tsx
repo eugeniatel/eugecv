@@ -1,10 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
 import { ImageResponse } from "next/og";
-import { RESUME_DATA } from "../data/resume-data";
 
 export const runtime = "edge";
 
-export const alt = "Minimalist Resume";
+export const alt = "Eugenia Tellechea Resume Preview";
 export const size = {
   width: 1200,
   height: 630,
@@ -26,29 +25,17 @@ export default async function Image() {
           fontFamily: '"Inter"',
         }}
       >
-        <div
+        <img
+          src="/images/preview.png" // Ensure this image is in public/images/
+          alt="Eugenia Tellechea Resume Preview"
           style={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            justifyContent: "center",
-            textAlign: "center",
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
           }}
-        >
-          <img
-            src="https://eugeniacv.vercel.app/images/preview.png" // ✅ Updated Image URL
-            alt="Eugenia Tellechea Resume Preview"
-            style={{
-              width: "100%",
-              height: "100%",
-              objectFit: "cover",
-            }}
-          />
-        </div>
+        />
       </div>
     ),
-    {
-      ...size,
-    }
+    { ...size }
   );
 }

@@ -19,7 +19,7 @@ export async function generateMetadata(): Promise<Metadata> {
       type: "website",
       images: [
         {
-          url: "/images/preview.png", // ✅ Make sure this image is inside `public/images/`
+          url: "/images/preview.png", // Make sure this image exists in public/images/
           width: 1200,
           height: 630,
           alt: `${RESUME_DATA.name}'s profile picture`,
@@ -46,4 +46,27 @@ export default function ResumePage() {
       </div>
 
       <section
-        className="mx-auto
+        className="mx-auto w-full max-w-2xl space-y-8 bg-white print:space-y-4"
+        aria-label="Resume Content"
+      >
+        <Header />
+
+        <div className="space-y-8 print:space-y-4">
+          <Summary summary={RESUME_DATA.summary} />
+          <WorkExperience work={RESUME_DATA.work} />
+          <Education education={RESUME_DATA.education} />
+          <Skills skills={RESUME_DATA.skills} />
+        </div>
+      </section>
+
+      <nav className="print:hidden" aria-label="Quick navigation">
+        <CommandMenu
+          links={RESUME_DATA.contact.social.map((social) => ({
+            url: social.url,
+            title: social.name,
+          }))}
+        />
+      </nav>
+    </main>
+  );
+}
