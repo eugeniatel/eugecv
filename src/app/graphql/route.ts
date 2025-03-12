@@ -10,12 +10,20 @@ import { NextRequest } from "next/server";
 const schema = await buildSchema({
   resolvers: [MeResolver],
 });
+
 const apolloServer = new ApolloServer({
   schema,
   plugins: [ApolloServerPluginLandingPageLocalDefault()],
   introspection: true,
 });
+
+// Define the context type
+type Context = {
+  req: NextRequest;
+};
+
 const handler = startServerAndCreateNextHandler<NextRequest>(apolloServer, {
-  context: async (req) => ({ req }),
+  context: async (req): Promise<Context> => ({ req }),
 });
+
 export { handler as GET, handler as POST };
