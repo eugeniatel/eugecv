@@ -17,18 +17,19 @@ export const metadata: Metadata = {
     locale: "en_US",
     images: [
       {
-        url: "https://cv.jarocki.me/opengraph-image",
+        url: "https://eugeniacv.vercel.app/images/preview.png", // ✅ Updated Image URL
         width: 1200,
         height: 630,
         alt: `${RESUME_DATA.name}'s profile picture`,
       },
     ],
+    url: "https://eugeniacv.vercel.app",
   },
   twitter: {
     card: "summary_large_image",
     title: `${RESUME_DATA.name} - Resume`,
     description: RESUME_DATA.about,
-    images: ["https://cv.jarocki.me/opengraph-image"],
+    images: ["https://eugeniacv.vercel.app/images/preview.png"], // ✅ Updated Image URL
   },
 };
 
@@ -41,15 +42,10 @@ interface CommandMenuLink {
 }
 
 function getCommandMenuLinks(): CommandMenuLink[] {
-  const links: CommandMenuLink[] = [];
-
-  return [
-    ...links,
-    ...RESUME_DATA.contact.social.map((socialMediaLink) => ({
-      url: socialMediaLink.url,
-      title: socialMediaLink.name,
-    })),
-  ];
+  return RESUME_DATA.contact.social.map((socialMediaLink) => ({
+    url: socialMediaLink.url,
+    title: socialMediaLink.name,
+  }));
 }
 
 export default function ResumePage() {
@@ -70,13 +66,9 @@ export default function ResumePage() {
 
         <div className="space-y-8 print:space-y-4">
           <Summary summary={RESUME_DATA.summary} />
-
           <WorkExperience work={RESUME_DATA.work} />
-
           <Education education={RESUME_DATA.education} />
-
           <Skills skills={RESUME_DATA.skills} />
-
         </div>
       </section>
 
