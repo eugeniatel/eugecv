@@ -17,13 +17,19 @@ const apolloServer = new ApolloServer({
   introspection: true,
 });
 
-// Define the context type
-type Context = {
+interface GraphQLContext {
   req: NextRequest;
-};
+}
 
-const handler = startServerAndCreateNextHandler<NextRequest>(apolloServer, {
-  context: async (req): Promise<Context> => ({ req }),
+const handler = startServerAndCreateNextHandler(apolloServer, {
+  context: async (req: NextRequest): Promise<GraphQLContext> => ({ req }),
 });
 
-export { handler as GET, handler as POST };
+// Export the handler with proper Next.js App Router types
+export async function GET(request: NextRequest) {
+  return handler(request);
+}
+
+export async function POST(request: NextRequest) {
+  return handler(request);
+}
