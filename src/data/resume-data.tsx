@@ -6,10 +6,10 @@ export const RESUME_DATA = {
   initials: "ET",
   location: "Buenos Aires, Argentina",
   about:
-    "Specialized in communication and research. Passionate about culture, decentralization and Ethereum.",
+    "Specialized in communication and research.",
   summary: (
     <>
-      Researcher with hands‐on experience in managing digital presence and content writing.
+      Researcher with experience in managing digital presence and content writing.
     </>
   ),
   avatarUrl: "/images/pfplinkedin.jpeg",
