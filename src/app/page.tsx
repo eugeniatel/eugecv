@@ -11,6 +11,10 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: `${RESUME_DATA.name} - Resume`,
     description: RESUME_DATA.about,
+    icons: {
+      icon: '/favicon.ico',
+      apple: '/apple-icon.png',
+    },
     openGraph: {
       title: `${RESUME_DATA.name} - Resume`,
       description: RESUME_DATA.about,
