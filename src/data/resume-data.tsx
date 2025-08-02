@@ -8,11 +8,11 @@ export const RESUME_DATA = {
   location: "Buenos Aires, Argentina",
   about:
     "Specialized in communication and research.",
-  // summary: (
-  //   <>
-  //     Researcher with experience in managing digital presence and content writing.
-  //   </>
-  // ),
+  summary: (
+    <>
+      Researcher with experience in managing digital presence and content writing.
+    </>
+  ),
   avatarUrl: "/images/pfp.png",
   personalWebsiteUrl: "https://eugeniatel.github.io",
   contact: {
