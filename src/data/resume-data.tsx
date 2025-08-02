@@ -1,4 +1,5 @@
 import { LinkedInIcon } from "@/components/icons";
+import { TelegramIcon } from "@/components/icons";
 import { XIcon } from "@/components/icons";
 
 export const RESUME_DATA = {
@@ -7,12 +8,12 @@ export const RESUME_DATA = {
   location: "Buenos Aires, Argentina",
   about:
     "Specialized in communication and research.",
-  summary: (
-    <>
-      Researcher with experience in managing digital presence and content writing.
-    </>
-  ),
-  avatarUrl: "/images/pfplinkedin.jpeg",
+  // summary: (
+  //   <>
+  //     Researcher with experience in managing digital presence and content writing.
+  //   </>
+  // ),
+  avatarUrl: "/images/pfp.png",
   personalWebsiteUrl: "https://eugeniatel.github.io",
   contact: {
     email: "eugeniatellechea@proton.me",
@@ -27,6 +28,11 @@ export const RESUME_DATA = {
         name: "X",
         url: "https://x.com/eugenia_0x",
         icon: XIcon,
+      },
+      {
+        name: "Telegram",
+        url: "https://t.me/eugeniatel",
+        icon: TelegramIcon,
       },
     ],
   },
@@ -46,6 +52,21 @@ export const RESUME_DATA = {
   ],
   work: [
     {
+      company: "Summerstone",
+      link: "https://summerstone.xyz",
+      title: "Ecosystem & Community Lead",
+      start: "May 2025",
+      end: "Present",
+      description: (
+        <ul className="list-disc list-inside">
+          <li>
+            Leading ecosystem and community at Summerstone, a market operations studio building on the Liquity ecosystem.
+          </li>
+        </ul>
+      ),
+      badges: [],
+    },
+    {
       company: "Web3 Citizen",
       link: "https://web3citizen.xyz",
       title: "Core Contributor",
@@ -59,10 +80,10 @@ export const RESUME_DATA = {
                 href="https://www.web3citizen.xyz/research/eigenlayer"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="underline text-blue-600 hover:text-blue-800 visited:text-purple-600"
+                className="underline text-foreground hover:text-foreground visited:text-foreground"
               >
                 Restaking and EigenLayer
-              </a>.
+              </a>, and the early Based Rollups ecosystem.
           </li>
           <li>
             Conducted research on related topics to ensure accuracy.
@@ -73,7 +94,7 @@ export const RESUME_DATA = {
                 href="https://paragraph.xyz/@web3citizenxyz"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="underline text-blue-600 hover:text-blue-800 visited:text-purple-600"
+                className="underline text-foreground hover:text-foreground visited:text-foreground"
               >
                 EigenLayer News and OP Bulletin
               </a>
