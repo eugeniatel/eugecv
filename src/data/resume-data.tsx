@@ -14,7 +14,7 @@ export const RESUME_DATA = {
     </>
   ),
   avatarUrl: "/images/pfp.png",
-  personalWebsiteUrl: "https://eugeniatel.github.io",
+  personalWebsiteUrl: "https://eugeniatel.com",
   contact: {
     email: "eugeniatellechea@proton.me",
     tel: "",
