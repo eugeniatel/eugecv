@@ -232,7 +232,7 @@ export const RESUME_DATA = {
             >
               Geodework
             </a>
-            's newsletter.
+            &apos;s newsletter.
           </li>
           <li>Devcon Scholar 2024 for Devcon SEA.</li>
           <li>Participated in the Translatathon 2024.</li>

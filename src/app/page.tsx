@@ -8,16 +8,18 @@ import { Header } from "./components/Header";
 import type { Metadata } from "next";
 
 export async function generateMetadata(): Promise<Metadata> {
+  const description = "Specialized in communication and research.";
+
   return {
     title: `${RESUME_DATA.name} - Resume`,
-    description: RESUME_DATA.about,
+    description,
     icons: {
       icon: '/favicon.ico',
       apple: '/apple-icon.png',
     },
     openGraph: {
       title: `${RESUME_DATA.name} - Resume`,
-      description: RESUME_DATA.about,
+      description,
       url: "https://eugeniacv.vercel.app",
       siteName: "Eugenia Tellechea Resume",
       type: "website",
@@ -33,7 +35,7 @@ export async function generateMetadata(): Promise<Metadata> {
     twitter: {
       card: "summary_large_image",
       title: `${RESUME_DATA.name} - Resume`,
-      description: RESUME_DATA.about,
+      description,
       images: ["/images/preview.png"],
     },
   };
