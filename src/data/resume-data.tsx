@@ -6,8 +6,13 @@ export const RESUME_DATA = {
   name: "Eugenia Tellechea",
   initials: "ET",
   location: "Buenos Aires, Argentina",
-  about:
-    "Specialized in communication and research.",
+  about: (
+    <>
+      Specialized in communication and research.
+      <br />
+      <span className="text-xs">To reach out, please use the TG link below.</span>
+    </>
+  ),
   summary: (
     <>
       Researcher with experience in managing digital presence and content writing.
@@ -52,6 +57,37 @@ export const RESUME_DATA = {
   ],
   work: [
     {
+      company: "GraphOps",
+      link: "https://graphops.xyz",
+      title: "Operations Manager",
+      start: "Sep 2025",
+      end: "Present",
+      description: (
+        <ul className="list-disc list-inside">
+          <li>
+            Making the gears work at{" "}
+            <a
+              href="https://graphops.xyz"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline text-foreground hover:text-foreground visited:text-foreground"
+            >
+              GraphOps
+            </a>, where we build the data layer, serving and transforming blockchain data to protocols. GraphOps is also a Core Developer of{" "}
+            <a
+              href="https://thegraph.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline text-foreground hover:text-foreground visited:text-foreground"
+            >
+              The Graph
+            </a>.
+          </li>
+        </ul>
+      ),
+      badges: [],
+    },
+    {
       company: "Summerstone",
       link: "https://summerstone.xyz",
       title: "Ecosystem & Community Lead",
@@ -60,7 +96,15 @@ export const RESUME_DATA = {
       description: (
         <ul className="list-disc list-inside">
           <li>
-            Leading ecosystem and community at Summerstone, a market operations studio building on the Liquity ecosystem.
+            Leading ecosystem and community at{" "}
+            <a
+              href="https://summerstone.xyz"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline text-foreground hover:text-foreground visited:text-foreground"
+            >
+              Summerstone
+            </a>, a market operations studio building on the Liquity ecosystem and DeFi space.
           </li>
         </ul>
       ),
@@ -71,7 +115,7 @@ export const RESUME_DATA = {
       link: "https://web3citizen.xyz",
       title: "Core Contributor",
       start: "Sep 2023",
-      end: "Present",
+      end: "Jul 2025",
       description: (
         <ul className="list-disc list-inside">
           <li>
@@ -109,7 +153,7 @@ export const RESUME_DATA = {
     },
     {
       company: "Aleph",
-      link: "https://aleph.crecimiento.build/hackathon",
+      link: "https://aleph.crecimiento.build/",
       title: "Hackathon Team",
       start: "Dec 2024",
       end: "Dec 2024",
@@ -169,6 +213,27 @@ export const RESUME_DATA = {
       end: "",
       description: (
         <ul className="list-disc list-inside">
+          <li>
+            Wrote the{" "}
+            <a
+              href="https://geodework.com/blog/argentina-ethereum-ecosystem-overview"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline text-foreground hover:text-foreground visited:text-foreground"
+            >
+              Argentinian Ecosystem Edition
+            </a>{" "}
+            for{" "}
+            <a
+              href="https://geodework.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline text-foreground hover:text-foreground visited:text-foreground"
+            >
+              Geodework
+            </a>
+            's newsletter.
+          </li>
           <li>Devcon Scholar 2024 for Devcon SEA.</li>
           <li>Participated in the Translatathon 2024.</li>
         </ul>
@@ -179,7 +244,7 @@ export const RESUME_DATA = {
   skills: [
     "Social Media Management",
     "Research & Analysis",
-    "Newsletter Management",
+    "Written content",
   ],
 } as const;
 
